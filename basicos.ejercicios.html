@@ -216,10 +216,108 @@
       factorial(8);
 
       /* 12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true */
+      const numeroPrimo = (numero3 = undefined) => {
+        if (numero3 === undefined)
+          return console.warn('No se ingreso un numero');
+
+        if (typeof numero3 !== 'number')
+          return console.error(
+            `El valor "${numero3} ingresado, NO es un numero`
+          );
+
+        if (numero3 === 0) return console.error('El numero no puede ser 0');
+
+        if (numero3 === 1) return console.log('El numero no puede ser 1');
+
+        if (Math.sign(numero3) === -1)
+          return console.error('El numero no puede ser negativo');
+
+        let divisible = false;
+
+        for (let i = 2; i < numero3; i++) {
+          if (numero3 % i === 0) {
+            divisible = true;
+            break;
+          }
+        }
+
+        return divisible
+          ? console.log(`El numero ${numero3} NO es primo`)
+          : console.log(`El numero ${numero3} SI es primo`);
+      };
+
+      numeroPrimo();
+      numeroPrimo('320');
+      numeroPrimo(true);
+      numeroPrimo(0);
+      numeroPrimo(1);
+      numeroPrimo(-13);
+      numeroPrimo(13);
+      numeroPrimo(200);
 
       /* 13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar */
+      const numeroParImpar = (numero4 = undefined) => {
+        if (numero4 === undefined)
+          return console.warn('No se ingreso un numero');
+
+        if (typeof numero4 !== 'number')
+          return console.error(
+            `El valor "${numero4}" ingresado NO es un numero`
+          );
+
+        return numero4 % 2 === 0
+          ? console.info(`El numero ${numero4} es Par`)
+          : console.info(`El numero ${numero4} es Impar`);
+      };
+
+      numeroParImpar();
+      numeroParImpar('23');
+      numeroParImpar(-390);
+      numeroParImpar(19);
 
       /* 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F */
+      const convertirGrados = (grados = undefined, unidad = undefined) => {
+        if (grados === undefined)
+          return console.warn('No se ingreso grados a convertir');
+
+        if (typeof grados !== 'number')
+          return console.error(
+            `El valor "${grados}" ingresado, NO es un numero`
+          );
+
+        if (unidad === undefined)
+          return console.warn('No se ingreso el tipo de grado a convertir');
+
+        if (typeof unidad !== 'string')
+          return console.error(
+            `El valor "${unidad}" ingresado, NO es una cadena de texto`
+          );
+
+        if (unidad.length !== 1 || !/(C|F)/.test(unidad))
+          return console.warn('Valor de la unidad no reconocido');
+
+        if (unidad === 'C') {
+          return console.info(
+            `${grados}*C = ${Math.round(grados * (9 / 5) + 32)}*F`
+          );
+        } else if (unidad === 'F') {
+          return console.info(
+            `${grados}*F = ${Math.round((grados - 32) * (5 / 9))}*C`
+          );
+        } else {
+          return console.error('El tipo de grados a convertir NO es valido');
+        }
+      };
+      convertirGrados();
+      convertirGrados('2');
+      convertirGrados(2);
+      convertirGrados(2, true);
+      convertirGrados(2, 'Hola');
+      convertirGrados(2, 'E');
+      convertirGrados(2, 'C');
+      convertirGrados(100, 'C');
+      convertirGrados(32, 'F');
+      convertirGrados(100, 'F');
 
       /* 15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10 */
 
