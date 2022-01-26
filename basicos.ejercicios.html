@@ -30,13 +30,15 @@
             )
           : console.info(cadena.slice(0, longitud));
 
-      recortarTexto('Hola Mundo', 4);
-      recortarTexto();
-      recortarTexto('Hola Hola');
-      recortarTexto('', 5);
+      /*
+             recortarTexto('Hola Mundo', 4);
+             recortarTexto();
+             recortarTexto('Hola Hola');
+             recortarTexto('', 5);
+             */
 
       /* 3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe.
-         miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'] */
+                miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'] */
       const cadenaAArreglo = (cadena = '', separador = undefined) =>
         !cadena
           ? console.warn('No se ingreso una cadena de texto')
@@ -48,9 +50,12 @@
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At repudiandae deserunt in perspiciatis. Nisi quibusdam nam dolores accusamus alias, similique aut commodi illum qui dolorem, at ipsa itaque ipsum enim.',
         ' '
       );
-      cadenaAArreglo();
-      cadenaAArreglo('Hola Mundo');
-      cadenaAArreglo('', '-');
+
+      /*
+             cadenaAArreglo();
+             cadenaAArreglo('Hola Mundo');
+             cadenaAArreglo('', '-');
+             */
 
       /* 4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo */
       const repetirTexto = (texto = '', veces = undefined) => {
@@ -70,11 +75,13 @@
         for (let i = 1; i <= veces; i++) console.log(`${texto}, ${i}`);
       };
 
-      repetirTexto('Hola Mundo', 3);
-      repetirTexto('Hola Mundo', 0);
-      repetirTexto('Hola Mundo', -20);
-      repetirTexto('', 20);
-      repetirTexto('Hola Mundo');
+      /*
+             repetirTexto('Hola Mundo', 3);
+             repetirTexto('Hola Mundo', 0);
+             repetirTexto('Hola Mundo', -20);
+             repetirTexto('', 20);
+             repetirTexto('Hola Mundo');
+             */
 
       /* 5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH" */
       const invertirCadena = (cadena = '') =>
@@ -82,12 +89,14 @@
           ? console.warn('No se ingreso una cadena de texto')
           : console.info(cadena.split('').reverse().join(''));
 
-      invertirCadena();
-      invertirCadena('Hola Mundo');
-      invertirCadena('JavaScript es un lenguaje de programacion increible');
-      invertirCadena(
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate soluta, delectus dolore sed ipsum necessitatibus at ducimus atque, velit molestiae sint. Molestias, suscipit. Aliquam quam numquam quidem nam tempora ut?'
-      );
+      /*
+             invertirCadena();
+             invertirCadena('Hola Mundo');
+             invertirCadena('JavaScript es un lenguaje de programacion increible');
+             invertirCadena(
+               'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate soluta, delectus dolore sed ipsum necessitatibus at ducimus atque, velit molestiae sint. Molestias, suscipit. Aliquam quam numquam quidem nam tempora ut?'
+             );
+             */
 
       /* 6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2 */
       const textoEnCadena = (cadena = '', texto = '') => {
@@ -108,10 +117,12 @@
         return console.info(`La palabra ${texto} se repite ${contador} veces`);
       };
 
-      textoEnCadena();
-      textoEnCadena('', 'mundo');
-      textoEnCadena('Hola mundo adios mundo');
-      textoEnCadena('Hola mundo adios mundo hi mundo goodbye mundo', 'mundo');
+      /*
+             textoEnCadena();
+             textoEnCadena('', 'mundo');
+             textoEnCadena('Hola mundo adios mundo');
+             textoEnCadena('Hola mundo adios mundo hi mundo goodbye mundo', 'mundo');
+       */
 
       /* 7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true */
       const palindromo = (palabra = '') => {
@@ -129,9 +140,11 @@
             );
       };
 
-      palindromo();
-      palindromo('hola Mundo');
-      palindromo('SaLas');
+      /*
+             palindromo();
+             palindromo('hola Mundo');
+             palindromo('SaLas');
+             */
 
       /* 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5 */
       const eliminarCaracteres = (texto = '', patron = '') =>
@@ -141,13 +154,16 @@
           ? console.warn('No se ingreso un patron de caracteres')
           : console.info(texto.replace(new RegExp(patron, 'ig'), ''));
 
-      eliminarCaracteres();
-      eliminarCaracteres('xyz1, xyz2, xyz3, xyz4 y xyz5');
-      eliminarCaracteres('xyz1, xyz2, xyz3, xyz4 y xyz5', 'xyz');
-      eliminarCaracteres(
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, eligendi itaque? Laudantium quo, dolorum nihil reiciendis blanditiis necessitatibus perferendis beatae accusamus aut porro optio obcaecati id vitae officiis explicabo atque.',
-        '[a-z]'
-      );
+      /*
+             eliminarCaracteres();
+             eliminarCaracteres('xyz1, xyz2, xyz3, xyz4 y xyz5');
+             eliminarCaracteres('xyz1, xyz2, xyz3, xyz4 y xyz5', 'xyz');
+             eliminarCaracteres(
+               'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, eligendi itaque? Laudantium quo, dolorum nihil reiciendis blanditiis necessitatibus perferendis beatae accusamus aut porro optio obcaecati id vitae officiis explicabo atque.',
+               '[a-z]'
+             );
+             */
+
       /* 9) Programa una función que obtenga un numero aleatorio entre 501 y 600 */
       const aleatorio = () =>
         console.info(Math.round(Math.random() * 100) + 500);
@@ -175,13 +191,15 @@
             );
       };
 
-      capicua();
-      capicua('19');
-      capicua({});
-      capicua(2000);
-      capicua(2002);
-      capicua(18.99);
-      capicua(212.212);
+      /*
+             capicua();
+             capicua('19');
+             capicua({});
+             capicua(2000);
+             capicua(2002);
+             capicua(18.99);
+             capicua(212.212);
+             */
 
       /* 11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120 */
       const factorial = (numero2 = undefined) => {
@@ -207,13 +225,15 @@
         return console.info(`El factorial de ${numero2} es ${factorial}`);
       };
 
-      factorial();
-      factorial('5');
-      factorial([1, 2, 3]);
-      factorial(0);
-      factorial(-5);
-      factorial(5);
-      factorial(8);
+      /*
+             factorial();
+             factorial('5');
+             factorial([1, 2, 3]);
+             factorial(0);
+             factorial(-5);
+             factorial(5);
+             factorial(8);
+             */
 
       /* 12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true */
       const numeroPrimo = (numero3 = undefined) => {
@@ -246,14 +266,16 @@
           : console.log(`El numero ${numero3} SI es primo`);
       };
 
-      numeroPrimo();
-      numeroPrimo('320');
-      numeroPrimo(true);
-      numeroPrimo(0);
-      numeroPrimo(1);
-      numeroPrimo(-13);
-      numeroPrimo(13);
-      numeroPrimo(200);
+      /*
+             numeroPrimo();
+             numeroPrimo('320');
+             numeroPrimo(true);
+             numeroPrimo(0);
+             numeroPrimo(1);
+             numeroPrimo(-13);
+             numeroPrimo(13);
+             numeroPrimo(200);
+              */
 
       /* 13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar */
       const numeroParImpar = (numero4 = undefined) => {
@@ -270,10 +292,12 @@
           : console.info(`El numero ${numero4} es Impar`);
       };
 
-      numeroParImpar();
-      numeroParImpar('23');
-      numeroParImpar(-390);
-      numeroParImpar(19);
+      /*
+             numeroParImpar();
+             numeroParImpar('23');
+             numeroParImpar(-390);
+             numeroParImpar(19);
+              */
 
       /* 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F */
       const convertirGrados = (grados = undefined, unidad = undefined) => {
@@ -308,22 +332,132 @@
           return console.error('El tipo de grados a convertir NO es valido');
         }
       };
-      convertirGrados();
-      convertirGrados('2');
-      convertirGrados(2);
-      convertirGrados(2, true);
-      convertirGrados(2, 'Hola');
-      convertirGrados(2, 'E');
-      convertirGrados(2, 'C');
-      convertirGrados(100, 'C');
-      convertirGrados(32, 'F');
-      convertirGrados(100, 'F');
+
+      /*
+             convertirGrados();
+             convertirGrados('2');
+             convertirGrados(2);
+             convertirGrados(2, true);
+             convertirGrados(2, 'Hola');
+             convertirGrados(2, 'E');
+             convertirGrados(2, 'C');
+             convertirGrados(100, 'C');
+             convertirGrados(32, 'F');
+             convertirGrados(100, 'F');
+              */
 
       /* 15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10 */
+      const convertirBinarioDecimal = (
+        numero = undefined,
+        base = undefined
+      ) => {
+        if (numero === undefined)
+          return console.warn('No se ingreso el numero a convertir');
+
+        if (typeof numero !== 'number')
+          return console.error(
+            `El valor "${numero}" ingresdado, NO es un numero`
+          );
+
+        if (base === undefined)
+          return console.warn('No se ingreso la base a convertir');
+
+        if (typeof base !== 'number')
+          return console.error(`El valor "${base}" ingresado, NO es un numero`);
+
+        if (base === 2) {
+          return console.info(
+            `${numero} base ${base} = ${parseInt(numero, base)} base 10`
+          );
+        } else if (base === 10) {
+          return console.info(
+            `${numero} base ${base} = ${numero.toString(2)} base 2`
+          );
+        } else {
+          return console.error('El tipo de base a convertir NO es valido');
+        }
+      };
+
+      /*
+       convertirBinarioDecimal();
+       convertirBinarioDecimal('2');
+       convertirBinarioDecimal(100);
+       convertirBinarioDecimal(100, '2');
+       convertirBinarioDecimal(100, 2);
+       convertirBinarioDecimal(1110010, 2);
+       convertirBinarioDecimal(4, 10);
+       convertirBinarioDecimal(114, 10);
+      */
 
       /* 16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800 */
+      const aplicarDescuento = (monto = undefined, descuento = 0) => {
+        if (monto === undefined) return console.warn('No se ingreso el monto');
+
+        if (typeof monto !== 'number')
+          return console.error(`El valor "${monto}" ingreso, NO es un numero`);
+
+        if (monto === 0) return console.error('El monto no puede ser 0');
+
+        if (Math.sign(monto) === -1)
+          return console.error('El monto no puede ser negativo');
+
+        if (typeof descuento !== 'number')
+          return console.error(
+            `El valor "${descuento}" ingresado, NO es un numero`
+          );
+
+        if (Math.sign(descuento) === -1)
+          return console.error('El descuento no puede ser negativo');
+
+        return console.info(
+          `${monto} - ${descuento}% = $${monto - (monto * descuento) / 100}`
+        );
+      };
+
+      /* 
+      aplicarDescuento();
+      aplicarDescuento('200');
+      aplicarDescuento(0);
+      aplicarDescuento(-1000);
+      aplicarDescuento(1000, '20');
+      aplicarDescuento(1000, -20);
+      aplicarDescuento(1000);
+      aplicarDescuento(1000, 25);
+      */
 
       /* 17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020) */
+      const calcularAnios = (fecha = undefined) => {
+        if (fecha === undefined) return console.warn('No se ingreso la fecha');
+
+        if (!(fecha instanceof Date))
+          return console.error(
+            'El valor que se ingreso no es una fecha valida'
+          );
+
+        let hoyMenosFecha = new Date().getTime() - fecha.getTime(),
+          aniosEnMS = 1000 * 60 * 60 * 24 * 365,
+          aniosHumanos = Math.floor(hoyMenosFecha / aniosEnMS);
+
+        return Math.sign(aniosHumanos) === -1
+          ? console.info(
+              `Faltan ${Math.abs(
+                aniosHumanos
+              )} años para el ${fecha.getFullYear()}.`
+            )
+          : Math.sign(aniosHumanos) === -1
+          ? console.info(
+              `Han pasado ${aniosHumanos} años desde ${fecha.getFullYear()}.`
+            )
+          : console.info(`Estamos en el año actual ${fecha.getFullYear()}.`);
+      };
+
+      calcularAnios();
+      calcularAnios({});
+      calcularAnios(false);
+      calcularAnios(new Date());
+      calcularAnios(new Date(1984, 4, 23));
+      calcularAnios(new Date(1884, 4, 23));
+      calcularAnios(new Date(2084, 4, 23));
 
       /* 18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5 */
 
@@ -344,21 +478,21 @@
       /* 26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5 */
 
       /* 27) Programa una clase llamada Pelicula.
-            La clase recibirá un objeto al momento de instanciarse con los siguentes datos: id de la película en IMDB, titulo, director, año de estreno, país o países de origen, géneros y calificación en IMBD.
-              - Todos los datos del objeto son obligatorios.
-              - Valida que el id IMDB tenga 9 caracteres, los primeros 2 sean letras y los 7 restantes números.
-              - Valida que el título no rebase los 100 caracteres.
-              - Valida que el director no rebase los 50 caracteres.
-              - Valida que el año de estreno sea un número entero de 4 dígitos.
-              - Valida que el país o paises sea introducidos en forma de arreglo.
-              - Valida que los géneros sean introducidos en forma de arreglo.
-              - Valida que los géneros introducidos esten dentro de los géneros aceptados*.
-              - Crea un método estático que devuelva los géneros aceptados*.
-              - Valida que la calificación sea un número entre 0 y 10 pudiendo ser decimal de una posición.
-              - Crea un método que devuelva toda la ficha técnica de la película.
-              - Apartir de un arreglo con la información de 3 películas genera 3 instancias de la clase de forma automatizada e imprime la ficha técnica de cada película.
-            * Géneros Aceptados: Action, Adult, Adventure, Animation, Biography, Comedy, Crime, Documentary ,Drama, Family, Fantasy, Film Noir, Game-Show, History, Horror, Musical, Music, Mystery, News, Reality-TV, Romance, Sci-Fi, Short, Sport, Talk-Show, Thriller, War, Western.
-            */
+                   La clase recibirá un objeto al momento de instanciarse con los siguentes datos: id de la película en IMDB, titulo, director, año de estreno, país o países de origen, géneros y calificación en IMBD.
+                     - Todos los datos del objeto son obligatorios.
+                     - Valida que el id IMDB tenga 9 caracteres, los primeros 2 sean letras y los 7 restantes números.
+                     - Valida que el título no rebase los 100 caracteres.
+                     - Valida que el director no rebase los 50 caracteres.
+                     - Valida que el año de estreno sea un número entero de 4 dígitos.
+                     - Valida que el país o paises sea introducidos en forma de arreglo.
+                     - Valida que los géneros sean introducidos en forma de arreglo.
+                     - Valida que los géneros introducidos esten dentro de los géneros aceptados*.
+                     - Crea un método estático que devuelva los géneros aceptados*.
+                     - Valida que la calificación sea un número entre 0 y 10 pudiendo ser decimal de una posición.
+                     - Crea un método que devuelva toda la ficha técnica de la película.
+                     - Apartir de un arreglo con la información de 3 películas genera 3 instancias de la clase de forma automatizada e imprime la ficha técnica de cada película.
+                   * Géneros Aceptados: Action, Adult, Adventure, Animation, Biography, Comedy, Crime, Documentary ,Drama, Family, Fantasy, Film Noir, Game-Show, History, Horror, Musical, Music, Mystery, News, Reality-TV, Romance, Sci-Fi, Short, Sport, Talk-Show, Thriller, War, Western.
+                   */
     </script>
   </body>
 </html>
